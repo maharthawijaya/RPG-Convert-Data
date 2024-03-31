@@ -9,14 +9,14 @@ public partial class DataManager : Node
     private string[][] skillData;
 	private string[] data;
 
+	[Export]
 	private UIManager uiManager;
 
 	public override void _Ready()
 	{
-		uiManager = GetNode<UIManager>("/root/UIManager");
 
 		data = File.ReadAllLines(CLASSFILEPATH);
-		skillData = new string[skillData.Length][];
+		skillData = new string[data.Length][];
 
 		for ( int i = 0; i < data.Length; i++ ) {
 			string[] dataSplit = data[i].Split(',');
@@ -36,8 +36,8 @@ public partial class DataManager : Node
             Button btn = new() {
                 Text = $"{dataSplit[0]}. {dataSplit[1]}"
             };
-
             uiManager.CreateNewButton(btn);
+
             btn.Pressed += () => Btn_Pressed(capturedName, capturedDescription, capturedSkills);
         }
 	}

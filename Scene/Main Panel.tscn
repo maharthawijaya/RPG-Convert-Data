@@ -1,42 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm2bnsn6brkce"]
+[gd_scene load_steps=2 format=3 uid="uid://ydrmbfer8w14"]
 
-[ext_resource type="Script" path="res://Scripts/DataManager.cs" id="1_0lcl4"]
-[ext_resource type="Script" path="res://Scripts/UIManager.cs" id="1_n0klw"]
+[ext_resource type="Script" path="res://Scripts/UIManager.cs" id="1_fqpbl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8l5fu"]
-bg_color = Color(0.372549, 0.372549, 0.372549, 1)
-
-[node name="Canvas" type="Control" node_paths=PackedStringArray("uiManager")]
-layout_mode = 3
+[node name="Main Panel" type="Panel" node_paths=PackedStringArray("_buttonParent", "_jobDetailsPanel", "_jobName", "_jobDescription", "_jobSkill")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0lcl4")
-uiManager = NodePath("Main Panel")
-
-[node name="Main Panel" type="Panel" parent="." node_paths=PackedStringArray("_buttonParent", "_jobDetailsPanel", "_jobName", "_jobDescription", "_jobSkill")]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_n0klw")
+script = ExtResource("1_fqpbl")
 _buttonParent = NodePath("ClassList/Container Vertical ClassList")
 _jobDetailsPanel = NodePath("ClassDetails")
 _jobName = NodePath("ClassDetails/JobNamePanel/JobNameLabel")
 _jobDescription = NodePath("ClassDetails/JobDescriptionPanel/DescriptionLabel")
 _jobSkill = NodePath("ClassDetails/JobSkillsPanel/SkillsLabel")
 
-[node name="ClassList" type="Panel" parent="Main Panel"]
+[node name="ClassList" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 213.0
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Main Panel/ClassList"]
+[node name="Title" type="Label" parent="ClassList"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -49,7 +35,7 @@ text = "Choose your Class:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Container Vertical ClassList" type="VBoxContainer" parent="Main Panel/ClassList"]
+[node name="Container Vertical ClassList" type="VBoxContainer" parent="ClassList"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 1
 offset_left = 19.0
@@ -58,45 +44,47 @@ offset_right = 196.0
 offset_bottom = 308.0
 theme_override_constants/separation = 10
 
-[node name="ClassDetails" type="Panel" parent="Main Panel"]
+[node name="ClassDetails" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 231.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -349.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 323.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="JobNamePanel" type="Panel" parent="Main Panel/ClassDetails"]
+[node name="JobNamePanel" type="Panel" parent="ClassDetails"]
 layout_mode = 1
 offset_left = 50.0
 offset_top = 50.0
 offset_right = 461.0
 offset_bottom = 99.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_8l5fu")
 
-[node name="JobNameLabel" type="Label" parent="Main Panel/ClassDetails/JobNamePanel"]
+[node name="JobNameLabel" type="Label" parent="ClassDetails/JobNamePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Warriors"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="JobSkillsPanel" type="Panel" parent="Main Panel/ClassDetails"]
+[node name="JobSkillsPanel" type="Panel" parent="ClassDetails"]
 layout_mode = 1
 offset_left = 50.0
 offset_top = 116.0
 offset_right = 175.0
 offset_bottom = 267.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_8l5fu")
 
-[node name="JobNameLabel" type="Label" parent="Main Panel/ClassDetails/JobSkillsPanel"]
+[node name="JobNameLabel" type="Label" parent="ClassDetails/JobSkillsPanel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -104,13 +92,12 @@ offset_left = 4.0
 offset_right = 4.0
 offset_bottom = 28.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "Skills :
 "
 vertical_alignment = 1
 
-[node name="SkillsLabel" type="Label" parent="Main Panel/ClassDetails/JobSkillsPanel"]
+[node name="SkillsLabel" type="Label" parent="ClassDetails/JobSkillsPanel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -119,20 +106,18 @@ offset_top = 31.0
 offset_right = -4.0
 offset_bottom = 150.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Skills
 "
 
-[node name="JobDescriptionPanel" type="Panel" parent="Main Panel/ClassDetails"]
+[node name="JobDescriptionPanel" type="Panel" parent="ClassDetails"]
 layout_mode = 1
 offset_left = 195.0
 offset_top = 116.0
 offset_right = 459.0
 offset_bottom = 267.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_8l5fu")
 
-[node name="JobNameLabel" type="Label" parent="Main Panel/ClassDetails/JobDescriptionPanel"]
+[node name="JobNameLabel" type="Label" parent="ClassDetails/JobDescriptionPanel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -140,13 +125,12 @@ offset_left = 7.0
 offset_right = -7.0
 offset_bottom = 28.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "Job Description :
 "
 vertical_alignment = 1
 
-[node name="DescriptionLabel" type="Label" parent="Main Panel/ClassDetails/JobDescriptionPanel"]
+[node name="DescriptionLabel" type="Label" parent="ClassDetails/JobDescriptionPanel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -155,8 +139,6 @@ offset_top = 31.0
 offset_right = -7.0
 offset_bottom = 150.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "Skills
 "
-autowrap_mode = 3

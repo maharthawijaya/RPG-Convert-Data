@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cii2bubijqcqq"
+
+[deps]
+
+files=["res://Class.Warrior.translation", "res://Class.A strength focused job. Warrior uses a two handed sword..translation", "res://Class.Slash; Break Shield; Parry;.translation"]
+
+source_file="res://Class.csv"
+dest_files=["res://Class.Warrior.translation", "res://Class.A strength focused job. Warrior uses a two handed sword..translation", "res://Class.Slash; Break Shield; Parry;.translation"]
+
+[params]
+
+compress=true
+delimiter=0

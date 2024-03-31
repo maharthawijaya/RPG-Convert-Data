@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dikpo\\Documents\\GODOT\\RPG Convert Data\\RPG-Convert-Data\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{437ED8D6-4802-4B26-A989-0D3EA52A52F5}|RPG Convert Data.csproj|c:\\users\\dikpo\\documents\\godot\\rpg convert data\\rpg-convert-data\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437ED8D6-4802-4B26-A989-0D3EA52A52F5}|RPG Convert Data.csproj|solutionrelative:scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{437ED8D6-4802-4B26-A989-0D3EA52A52F5}|RPG Convert Data.csproj|c:\\users\\dikpo\\documents\\godot\\rpg convert data\\rpg-convert-data\\scripts\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437ED8D6-4802-4B26-A989-0D3EA52A52F5}|RPG Convert Data.csproj|solutionrelative:scripts\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dikpo\\Documents\\GODOT\\RPG Convert Data\\RPG-Convert-Data\\Scripts\\UIManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\UIManager.cs",
+              "ToolTip": "C:\\Users\\Dikpo\\Documents\\GODOT\\RPG Convert Data\\RPG-Convert-Data\\Scripts\\UIManager.cs",
+              "RelativeToolTip": "Scripts\\UIManager.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T07:02:55.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dikpo\\Documents\\GODOT\\RPG Convert Data\\RPG-Convert-Data\\Scripts\\DataManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\DataManager.cs",
+              "ToolTip": "C:\\Users\\Dikpo\\Documents\\GODOT\\RPG Convert Data\\RPG-Convert-Data\\Scripts\\DataManager.cs",
+              "RelativeToolTip": "Scripts\\DataManager.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwCcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T06:53:54.875Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
