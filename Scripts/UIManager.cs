@@ -3,13 +3,32 @@ using System;
 
 public partial class UIManager : Node
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+    [Export]
+    private VBoxContainer _buttonParent;
+    [Export]
+    private Panel _jobDetailsPanel;
+    [Export]
+    private Label _jobName;
+    [Export]
+    private Label _jobDescription;
+    [Export]
+    private Label _jobSkill;
+
+    
+    
+    public override void _Ready()
 	{
+        _jobDetailsPanel.Visible = false;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    public void CreateNewButton(Button button) {
+        _buttonParent.AddChild(button);
+    }
+
+    public void ButtonPressed(string dataName, string dataDescriptions, string[] dataSkills) {
+        _jobDetailsPanel.Visible = true;
+        _jobName.Text = $"{dataName}";
+        _jobDescription.Text = $"{dataDescriptions}";
+        _jobSkill.Text = string.Join("\n", dataSkills);
+    }
 }
